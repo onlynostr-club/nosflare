@@ -25,5 +25,5 @@ enabled = true
 
 # Durable Object migration
 [[migrations]]
-tag = "v1"
+tag = "v7"
 new_classes = ["RelayWebSocket"]
