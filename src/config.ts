@@ -7,16 +7,16 @@ import { RelayInfo } from './types';
 // Settings below can be configured to your preferences
 
 // Pay to relay
-export const relayNpub = "npub16jdfqgazrkapk0yrqm9rdxlnys7ck39c7zmdzxtxqlmmpxg04r0sd733sv"; // Use your own npub
-export const PAY_TO_RELAY_ENABLED = true; // Set to false to disable pay to relay
-export const RELAY_ACCESS_PRICE_SATS = 2121; // Price in SATS for relay access
+export const relayNpub = "npub1qfhqd8lwrxlyegum5yq3vswegs9fkm6y5v0c9zpg7qltss9e0rkqpxddgn"; // Use your own npub
+export const PAY_TO_RELAY_ENABLED = false; // Set to false to disable pay to relay
+export const RELAY_ACCESS_PRICE_SATS = 0; // Price in SATS for relay access
 
 // Relay info
 export const relayInfo: RelayInfo = {
-  name: "Nosflare",
-  description: "A serverless Nostr relay through Cloudflare Worker and D1 database",
-  pubkey: "d49a9023a21dba1b3c8306ca369bf3243d8b44b8f0b6d1196607f7b0990fa8df",
-  contact: "lux@fed.wtf",
+  name: "relay.onlynostr.club",
+  description: "This relay is free to use. You'll need a valid NIP05 address to post. You can get a free NIP05 address at onlynostr.club",
+  pubkey: "2c584d04a98c6fa9cb2c1154d8ce913790a9b34f2281a3e9c9dd4b6ca5ce8dce",
+  contact: "admin@onlynostr.club",
   supported_nips: [1, 2, 4, 5, 9, 11, 12, 15, 16, 17, 20, 22, 33, 40],
   software: "https://github.com/Spl0itable/nosflare",
   version: "7.0.1",
@@ -29,19 +29,19 @@ export const relayInfo: RelayInfo = {
 
   // Relay limitations
   limitation: {
-    // max_message_length: 524288, // 512KB
-    // max_subscriptions: 300,
-    // max_limit: 10000,
-    // max_subid_length: 256,
-    // max_event_tags: 2000,
-    // max_content_length: 70000,
-    // min_pow_difficulty: 0,
-    // auth_required: false,
+    max_message_length: 524288, // 512KB
+    max_subscriptions: 300,
+    max_limit: 10000,
+    max_subid_length: 256,
+    max_event_tags: 2000,
+    max_content_length: 70000,
+    min_pow_difficulty: 0,
+    auth_required: false,
     payment_required: PAY_TO_RELAY_ENABLED,
     restricted_writes: PAY_TO_RELAY_ENABLED,
-    // created_at_lower_limit: 0,
-    // created_at_upper_limit: 2147483647,
-    // default_limit: 10000
+    created_at_lower_limit: 0,
+    created_at_upper_limit: 2147483647,
+    default_limit: 10000
   },
 
   // Event retention policies (uncomment and configure as needed):
@@ -120,7 +120,7 @@ export const blockedContent = new Set([
 ]);
 
 // NIP-05 validation
-export const checkValidNip05 = false; // Set to true to enable NIP-05 validation (this requires users to have a valid NIP-05 in order to publish events to the relay as part of anti-spam)
+export const checkValidNip05 = true; // Set to true to enable NIP-05 validation (this requires users to have a valid NIP-05 in order to publish events to the relay as part of anti-spam)
 
 // Blocked NIP-05 domains
 // This prevents users with NIP-05's from specified domains from publishing events to the relay
