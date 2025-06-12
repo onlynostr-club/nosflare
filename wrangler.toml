@@ -25,6 +25,6 @@ enabled = true
 
 # Durable Object migration
 [[migrations]]
-tag = "v7"
+tag = "v1"
 # new_classes = ["RelayWebSocket"]
 new_sqlite_classes = ["RelayWebSocket"]
