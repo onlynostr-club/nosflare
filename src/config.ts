@@ -120,7 +120,7 @@ export const blockedContent = new Set([
 ]);
 
 // NIP-05 validation
-export const checkValidNip05 = true; // Set to true to enable NIP-05 validation (this requires users to have a valid NIP-05 in order to publish events to the relay as part of anti-spam)
+export const checkValidNip05 = false; // Set to true to enable NIP-05 validation (this requires users to have a valid NIP-05 in order to publish events to the relay as part of anti-spam)
 
 // Blocked NIP-05 domains
 // This prevents users with NIP-05's from specified domains from publishing events to the relay
