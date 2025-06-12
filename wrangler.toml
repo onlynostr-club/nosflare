@@ -24,6 +24,6 @@ cpu_ms = 10
 enabled = true
 
 # Durable Object migration
-[[migrations]]
-tag = "v1"
-new_sqlite_classes = ["RelayWebSocket"]
+# [[migrations]]
+# tag = "v1"
+# new_sqlite_classes = ["RelayWebSocket"]
